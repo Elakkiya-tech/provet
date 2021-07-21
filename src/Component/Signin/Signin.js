@@ -12,7 +12,7 @@ const Signin =() =>{
     const handleChange = (event, newValue) => {
 		setValue(newValue);
 	};
-    const paperStyle={width:'400px', margin:'15px auto' ,height:'700px', backgroundColor:'#CDF0EA'}
+    const paperStyle={width:'400px', margin:'15px auto' ,height:'675px', backgroundColor:'#CDF0EA'}
     function TabPanel(props) {
 		const { children, value, index, ...other } = props;
 
