@@ -8,19 +8,23 @@ import Typography from '@material-ui/core/Typography';
 import PersonIcon from '@material-ui/icons/Person';
 import LockIcon from '@material-ui/icons/Lock';
 
-
 const Login=({handleChange}) => {
-	const paperStyle = {padding: '30px 35px', height: '595px', width: '500px', margin: '0 auto' };
-	const nameStyle = { margin: '40px 10px', width: '300px' };
-	const passStyle = { margin: '0 10px', width: '300px' };
-	const buttonStyle = { margin: '50px auto' };
+	const paperStyle = {
+  padding: "30px 35px",
+  height: "570px",
+  width: "330px",
+  margin: "0 auto",
+};
+const nameStyle = { margin: "30px 10px", width: "280px" };
+const passStyle = { margin: "0 10px", width: "280px" };
+const buttonStyle = { margin: "50px auto" };
 
-	return (
+return (
 		<div className="sample">
 		<Grid align="center">
 			<Paper style={paperStyle}>
 				<h1>LOGIN</h1>
-				<PersonIcon style={{ margin: '60px auto' }} />
+				<PersonIcon style={{ margin: '50px auto' }} />
 				<TextField style={nameStyle} label="Username" placeholder="Enter username"  />
 				<br />
 				<LockIcon style={{ margin: '20px auto' }} />
