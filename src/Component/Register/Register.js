@@ -15,14 +15,14 @@ import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid";
 
 const Register = () => {
   const paperStyle = {
-    padding: "40px 35px",
+    padding: "41px 35px",
     width: "330px",
     margin: "auto auto",
     boxShadow: "1px",
   };
   const headerStyle = { margin: 0 };
   const namestyles = { margin: "45px 10px", width: "280px" };
-  const emailstyles = { width: "280px", margin: "-30px 10px" };
+  const emailstyles = { width: "280px", margin: "-20px 10px" };
   const phonestyles = { width: "280px", margin: "25px 10px" };
   const pswdstyles = { width: "280px", margin: "-20px 10px" };
   const pswdstyle = { width: "280px", margin: "27px 10px" };
