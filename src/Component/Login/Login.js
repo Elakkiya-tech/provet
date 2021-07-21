@@ -7,7 +7,7 @@ import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import PersonIcon from '@material-ui/icons/Person';
 import LockIcon from '@material-ui/icons/Lock';
-
+import "./Login.css";
 
 const Login=({handleChange}) => {
 	const paperStyle = {padding: '30px 35px', height: '595px', width: '500px', margin: '0 auto' };
