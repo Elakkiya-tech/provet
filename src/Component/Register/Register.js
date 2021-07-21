@@ -5,7 +5,7 @@ import LockIcon from '@material-ui/icons/Lock';
 import EmailIcon from '@material-ui/icons/Email';
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 // import {Alert} from '@material-ui/lab';
-
+import "./Register.css";
 const Register = () => {
 
     const paperStyle = { padding: '40px 35px', width: '500px', margin: "auto auto", boxShadow:"1px" }
