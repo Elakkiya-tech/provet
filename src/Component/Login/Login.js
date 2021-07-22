@@ -7,35 +7,30 @@ import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import PersonIcon from '@material-ui/icons/Person';
 import LockIcon from '@material-ui/icons/Lock';
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import Styles from '../Style/Style';
 
-const Login=({handleChange}) => {
-	const paperStyle = {
-  padding: "30px 35px",
-  height: "535px",
-  width: "330px",
-  margin: "0 auto",
-};
-const nameStyle = { margin: "30px 10px", width: "280px" };
-const passStyle = { margin: "0 10px", width: "280px" };
-const buttonStyle = { margin: "50px auto" };
+function Login(props) {
+	const { classes } = props;
 
 return (
 		<div className="sample">
 		<Grid align="center">
-			<Paper style={paperStyle}>
+			<Paper className={classes.paperStyle}>
 				<h1>LOGIN</h1>
 				<PersonIcon style={{ margin: '50px auto' }} />
-				<TextField style={nameStyle} label="Username" placeholder="Enter username"  />
+				<TextField className={classes.nameStyle} label="Username" placeholder="Enter username"  />
 				<br />
 				<LockIcon style={{ margin: '20px auto' }} />
-				<TextField style={passStyle} label="Password" placeholder="Enter password" type="password"  />
+				<TextField className={classes.passStyle} label="Password" placeholder="Enter password" type="password"  />
 				<br />
-				<Button style={buttonStyle} variant="contained" color="primary">
+				<Button className={classes.buttonStyle} variant="contained" color="primary">
 					login
 				</Button>
 				<Typography>
-					Do you have an account?
-					<Link href="#" onclick={() => handleChange("event",1)}>
+					Don't you have an account?
+					<Link href="#" >
 						&nbsp;Signup
 					</Link>
 				</Typography>
@@ -44,11 +39,14 @@ return (
 		</div>
 	);
 }
+Login.propTypes = {
+classes: PropTypes.object.isRequired
+};
 
-export default Login;
+export default withStyles(Styles)(Login);
 
 
 
 
 
-				
+	
