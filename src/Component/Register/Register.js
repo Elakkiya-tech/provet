@@ -24,10 +24,10 @@ const Register = () => {
   const matches = useMediaQuery('(min-width:600px)');
   const headerStyle = { margin: 0 };
   const namestyles = { margin: "45px 10px", width: "280px" };
-  const emailstyles = { width: "280px", margin: "-20px 10px" };
-  const phonestyles = { width: "280px", margin: "25px 10px" };
+  const emailstyles = { width: "280px", margin: "-25px 10px" };
+  const phonestyles = { width: "280px", margin: "20px 10px" };
   const pswdstyles = { width: "280px", margin: "-20px 10px" };
-  const pswdstyle = { width: "280px", margin: "27px 10px" };
+  const pswdstyle = { width: "280px", margin: "17px 10px" };
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -43,13 +43,13 @@ const Register = () => {
       <Grid> {matches}
         <Paper style={paperStyle}>
           <Grid align="center">
-            <h2 style={headerStyle}>SIGN UP</h2>
+            <h1 style={headerStyle}>SIGN UP</h1>
             <Typography variant="caption" gutterBottom>
               Please fill this form to create an account
             </Typography>
           </Grid>
           <form onSubmit={handleSubmit}>
-            <PersonIcon style={{ margin: "65px auto" }} />
+            <PersonIcon style={{ marginTop:'65px'}} />
             <TextField
               style={namestyles}
               fullWidth
@@ -58,7 +58,7 @@ const Register = () => {
               required
               onChange={(e) => setName(e.target.value)}
             />
-            <EmailIcon />
+            <EmailIcon style={{ margin: "-5px auto" }}  />
             <TextField
               style={emailstyles}
               fullWidth
@@ -68,7 +68,7 @@ const Register = () => {
               required
               onChange={(e) => setEmail(e.target.value)}
             />
-            <PhoneAndroidIcon style={{ margin: "48px auto" }} />
+            <PhoneAndroidIcon style={{ margin: "38px auto" }} />
             <TextField
               style={phonestyles}
               fullWidth
@@ -85,7 +85,7 @@ const Register = () => {
               required
               onChange={(e) => setPassword(e.target.value)}
             />
-            <LockIcon style={{ margin: "48px auto" }} />
+            <LockIcon style={{ margin: "38px auto" }} />
             <TextField
               style={pswdstyle}
               fullWidth

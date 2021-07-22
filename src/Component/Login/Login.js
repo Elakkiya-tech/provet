@@ -11,7 +11,7 @@ import LockIcon from '@material-ui/icons/Lock';
 const Login=({handleChange}) => {
 	const paperStyle = {
   padding: "30px 35px",
-  height: "595px",
+  height: "535px",
   width: "330px",
   margin: "0 auto",
 };
