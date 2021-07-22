@@ -11,7 +11,7 @@ import PersonIcon from "@material-ui/icons/Person";
 import LockIcon from "@material-ui/icons/Lock";
 import EmailIcon from "@material-ui/icons/Email";
 import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid";
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+
 // import {Alert} from '@material-ui/lab';
 
 const Register = () => {
@@ -21,7 +21,7 @@ const Register = () => {
     margin: "auto auto",
     boxShadow: "1px",
   };
-  const matches = useMediaQuery('(min-width:600px)');
+  
   const headerStyle = { margin: 0 };
   const namestyles = { margin: "45px 10px", width: "280px" };
   const emailstyles = { width: "280px", margin: "-25px 10px" };
@@ -40,7 +40,7 @@ const Register = () => {
 
   return (
     <div className="sample">
-      <Grid> {matches}
+      <Grid item xs={4} md={8}>
         <Paper style={paperStyle}>
           <Grid align="center">
             <h1 style={headerStyle}>SIGN UP</h1>

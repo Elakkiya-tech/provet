@@ -21,7 +21,7 @@ const buttonStyle = { margin: "50px auto" };
 
 return (
 		<div className="sample">
-		<Grid align="center">
+		<Grid align="center" item xs={4} md={8}>
 			<Paper style={paperStyle}>
 				<h1>LOGIN</h1>
 				<PersonIcon style={{ margin: '50px auto' }} />
