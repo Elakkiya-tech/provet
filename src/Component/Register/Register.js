@@ -12,23 +12,14 @@ import LockIcon from "@material-ui/icons/Lock";
 import EmailIcon from "@material-ui/icons/Email";
 import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { withStyles } from "@material-ui/core/styles";
+import  Styles from '../Style/Style';
+import PropTypes from "prop-types";
 // import {Alert} from '@material-ui/lab';
 
-const Register = () => {
-  const paperStyle = {
-    padding: "41px 35px",
-    width: "330px",
-    margin: "auto auto",
-    boxShadow: "1px",
-  };
-  const matches = useMediaQuery('(min-width:600px)');
-  const headerStyle = { margin: 0 };
-  const namestyles = { margin: "45px 10px", width: "280px" };
-  const emailstyles = { width: "280px", margin: "-25px 10px" };
-  const phonestyles = { width: "280px", margin: "20px 10px" };
-  const pswdstyles = { width: "280px", margin: "-20px 10px" };
-  const pswdstyle = { width: "280px", margin: "17px 10px" };
-
+function Register(props) {
+  const { classes } = props;
+  const matches = useMediaQuery("(min-width:600px)");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -40,27 +31,29 @@ const Register = () => {
 
   return (
     <div className="sample">
-      <Grid> {matches}
-        <Paper style={paperStyle}>
+      <Grid>
+        {" "}
+        {matches}
+        <Paper className={classes.paperStyles}>
           <Grid align="center">
-            <h1 style={headerStyle}>SIGN UP</h1>
+            <h1 className={classes.headerStyle}>SIGN UP</h1>
             <Typography variant="caption" gutterBottom>
               Please fill this form to create an account
             </Typography>
           </Grid>
           <form onSubmit={handleSubmit}>
-            <PersonIcon style={{ marginTop:'65px'}} />
+            <PersonIcon style={{ marginTop: "65px" }} />
             <TextField
-              style={namestyles}
+              className={classes.namestyles}
               fullWidth
               label="Name"
               placeholder="Enter your name"
               required
               onChange={(e) => setName(e.target.value)}
             />
-            <EmailIcon style={{ margin: "-5px auto" }}  />
+            <EmailIcon style={{ margin: "-5px auto" }} />
             <TextField
-              style={emailstyles}
+              className={classes.emailstyles}
               fullWidth
               label="Email"
               placeholder="Enter your email"
@@ -70,14 +63,14 @@ const Register = () => {
             />
             <PhoneAndroidIcon style={{ margin: "38px auto" }} />
             <TextField
-              style={phonestyles}
+              className={classes.phonestyles}
               fullWidth
               label="Phone Number"
               placeholder="Enter your phone number"
             />
             <LockIcon />
             <TextField
-              style={pswdstyles}
+              className={classes.pswdstyles}
               fullWidth
               label="Password"
               placeholder="Enter your password"
@@ -87,7 +80,7 @@ const Register = () => {
             />
             <LockIcon style={{ margin: "38px auto" }} />
             <TextField
-              style={pswdstyle}
+              className={classes.pswdstyle}
               fullWidth
               label="Confirm Password"
               placeholder="Confirm your password"
@@ -107,5 +100,10 @@ const Register = () => {
     </div>
   );
 };
+Register.propTypes = {
+classes: PropTypes.object.isRequired
+};
 
-export default Register;
+export default withStyles(Styles)(Register);
+
+
