@@ -31,7 +31,8 @@ function Register(props) {
 
   return (
     <div className="sample">
-      <Grid>
+      <Grid container>
+      <Grid item xs={12} md={3} >
         {" "}
         {matches}
         <Paper className={classes.paperStyles}>
@@ -96,6 +97,7 @@ function Register(props) {
             </Box>
           </form>
         </Paper>
+      </Grid>
       </Grid>
     </div>
   );

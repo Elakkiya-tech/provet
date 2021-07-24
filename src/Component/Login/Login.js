@@ -16,7 +16,8 @@ function Login(props) {
 
 return (
 		<div className="sample">
-		<Grid align="center">
+		<Grid container>
+		<Grid align="center" item xs={12} md={3}>
 			<Paper className={classes.paperStyle}>
 				<h1>LOGIN</h1>
 				<PersonIcon style={{ margin: '50px auto' }} />
@@ -35,6 +36,7 @@ return (
 					</Link>
 				</Typography>
 			</Paper>
+		</Grid>
 		</Grid>
 		</div>
 	);
